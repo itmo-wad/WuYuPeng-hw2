@@ -1,0 +1,329 @@
+全局样式设置
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #f4f4f4, #e0e0e0);
+    color: #333;
+}
+
+/* 统一容器样式 */
+.login-container, 
+.register-container, 
+.update-profile-container, 
+.profile-container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 25px;
+    background-color: #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 悬停动画效果 */
+.profile-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* 标题样式 */
+h1 {
+    text-align: center;
+    color: #444;
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+/* 个人资料内容 */
+.profile-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 头像样式 */
+.profile-image img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid #007bff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+}
+
+/* 个人信息 */
+.profile-bio {
+    text-align: center;
+    width: 100%;
+}
+
+.profile-bio h2 {
+    color: #222;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.profile-bio p {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* 技能部分 */
+.skills-section {
+    margin-top: 20px;
+}
+
+.skills-section h3 {
+    font-size: 1.3em;
+    color: #007bff;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skill {
+    background: #007bff;
+    color: white;
+    padding: 6px 12px;
+    margin: 5px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* 通知部分 */
+.notifications-section {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.notifications-section h3 {
+    font-size: 1.3em;
+    color: #007bff;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.notifications-list {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.notification-item {
+    background: #f8f9fa;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    font-size: 0.9em;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.timestamp {
+    font-size: 0.8em;
+    color: #888;
+}
+
+/* 按钮样式 */
+.profile-actions {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    background: #007bff;
+    color: white;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+
+.btn-logout {
+    background: #dc3545;
+}
+
+.btn-logout:hover {
+    background: #a71d2a;
+}
+
+/* 页脚 */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #777;
+}
+
+
+/* 统一登录、注册、修改密码的样式 */
+.auth-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 25px;
+    background-color: #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.auth-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* 统一输入框样式 */
+.auth-container label {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #444;
+}
+
+.auth-container input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+/* 统一按钮样式 */
+.auth-container button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.auth-container button:hover {
+    background-color: #0056b3;
+}
+
+/* 登录、注册、修改密码页面的链接样式 */
+.auth-container p {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.auth-container a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.auth-container a:hover {
+    text-decoration: underline;
+}
+
+
+/* 统一个人资料更新页面的样式 */
+.auth-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 25px;
+    background-color: #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.auth-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* 统一输入框和文本框样式 */
+.auth-container label {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #444;
+}
+
+.auth-container input,
+.auth-container textarea,
+.auth-container select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+/* 让 textarea 更美观 */
+.auth-container textarea {
+    height: 80px;
+    resize: vertical;
+}
+
+/* 让 select 具有一致的样式 */
+.auth-container select {
+    height: 40px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+/* 统一按钮样式 */
+.auth-container button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.auth-container button:hover {
+    background-color: #0056b3;
+}
+
+/* 文件上传样式 */
+.auth-container input[type="file"] {
+    padding: 5px;
+    background: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+.btn-delete {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn-delete:hover {
+    background-color: #cc0000;
+}

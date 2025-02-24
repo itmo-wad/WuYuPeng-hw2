@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Profile</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="auth-container">
+        <h1>Update Profile</h1>
+        <form method="POST" action="{{ url_for('update_profile') }}" enctype="multipart/form-data">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" value="{{ user.get('name', '') }}" required>
+
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" value="{{ user.get('title', '') }}" required>
+
+            <label for="bio">Bio:</label>
+            <textarea id="bio" name="bio" required>{{ user.get('bio', '') }}</textarea>
+
+            <label for="skills">Skills:</label>
+            <select id="skills" name="skills" multiple>
+                <option value="Python">Python</option>
+                <option value="Golang">Golang</option>
+                <option value="Machine Learning">Machine Learning</option>
+                <option value="AI Security">AI Security</option>
+                <option value="AI Development">AI Development</option>
+            </select>
+
+            <label for="profile_image">Profile Image:</label>
+            <input type="file" id="profile_image" name="profile_image">
+
+            <button type="submit">Update Profile</button>
+        </form>
+    </div>
+</body>
+</html>

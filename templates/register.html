@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="auth-container">
+        <h1>Register</h1>
+        <form method="POST" action="{{ url_for('register') }}" enctype="multipart/form-data">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title">
+
+            <label for="bio">Bio:</label>
+            <textarea id="bio" name="bio"></textarea>
+
+            <label for="skills">Skills:</label>
+            <select id="skills" name="skills" multiple>
+                <option value="Python">Python</option>
+                <option value="Golang">Golang</option>
+                <option value="Machine Learning">Machine Learning</option>
+                <option value="AI security">AI security</option>
+                <option value="AI development">AI development</option>
+            </select>
+
+
+            <label for="profile_image">Profile Image:</label>
+            <input type="file" id="profile_image" name="profile_image">
+
+            <button type="submit">Register</button>
+        </form>
+        <p>Already have an account? <a href="{{ url_for('login') }}">Login</a></p>
+    </div>
+</body>
+</html>
